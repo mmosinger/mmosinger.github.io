@@ -5,3 +5,14 @@
 body {
   @apply bg-neutral-50 text-neutral-900 antialiased font-sans;
 }
+
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+  }
+}
+
+@page {
+  margin: 16mm;
+}
