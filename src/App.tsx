@@ -103,7 +103,11 @@ export default function CVSite() {
             <SectionTitle>Certifikáty</SectionTitle>
             <ul className="mt-3 space-y-2 text-sm">
               <li>SP1 – Základy MPLS, ALEF</li>
+              <li>SP2 - Advanced MPLS, ALEF</li>
+              <li>RS3 - Konfigurace a design BGP, ALEF</li>
+              <li>RS4 - Konfigurace protokolu IS-IS, ALEF</li>
               <li>CCNA Routing and Switching, Cisco</li>
+              <li>IT essentials, Cisco</li>
             </ul>
           </Card>
 
