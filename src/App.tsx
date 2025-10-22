@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Mail, Phone, MapPin, Github, Globe, Printer, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Printer, Linkedin } from "lucide-react";
 
 export default function CVSite() {
   const handlePrint = () => {
