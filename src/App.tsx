@@ -86,11 +86,11 @@ export default function CVSite() {
             <SectionTitle>Profil</SectionTitle>
             <p className="mt-3 text-[15px] leading-7 text-neutral-700">
               Učenlivý FD IP & IT specialista s víceletou praxí v instalaci optických kabelů, provozem infrastruktury a se zkušeností na auditu v souladu s NIS2.
-              Vystudovaná SŠ obor kybernetická bezpečnost, 3 semestry na ČVUT FIT a následné kombinované studium na ČZU PEF. Směr studia směřován převážně na síťové technologie a kybernetickou bezpečnost, momentálně se připravuji na získání certifikace CCNP Enterprise. Mimo síťové technologie mám zkušenosti s:
+              Vystudovaná SŠ obor kybernetická bezpečnost, 3 semestry na ČVUT FIT a následné kombinované studium na ČZU PEF. Směr studia směřován převážně na síťové technologie a kybernetickou bezpečnost, momentálně se připravuji na získání certifikace CCNP Enterprise. Angličtina na komunikativní úrovni s bezproblémovou srozumitelností technické dokumentace. Mimo síťové technologie mám zkušenosti s:
             </p>
             <ul className="mt-4 list-disc pl-5 text-[15px] leading-7 text-neutral-700">
               <li>Linux, skriptování v Bash/Python</li>
-              <li>Automatizaci provozních procesů</li>
+              <li>Automatizací provozních procesů</li>
               <li>Virtualizace - GNS3, EVE‑NG, Docker, VirtualBox, Proxmox</li>
               <li>Zkušenost s pokládkou, zafukováním a svařováním opt. kabelu</li>
             </ul>
