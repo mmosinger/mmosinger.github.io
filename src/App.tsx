@@ -20,6 +20,7 @@ export default function CVSite() {
               <a href="#praxe" className="hover:text-neutral-900 print:text-neutral-900">Praxe</a>
               <a href="#vzdelani" className="hover:text-neutral-900 print:text-neutral-900">Vzdělání</a>
               <a href="#certifikaty" className="hover:text-neutral-900 print:text-neutral-900">Certifikáty</a>
+              <a href="#projekty" className="hover:text-neutral-900 print:text-neutral-900">Projekty</a>
               <a href="#kontakt" className="hover:text-neutral-900 print:text-neutral-900">Kontakt</a>
             </nav>
             <button
@@ -107,13 +108,16 @@ export default function CVSite() {
                   "Správa síťových prvků a protokolů MPLS, IS-IS, BGP, LAG, PPPoE, RADIUS, QoS, SyncE, PTP a SD-WAN."
                 ]}
               />
-              <TimelineItem title="IT technik v terénu, Broadband" period="2016 — 2024" 
-              highlights={[
-                  "Zkušenost s instalací rádií, svařováním optických vláken a montování OLT/ONT.",
+              <TimelineItem
+                title="IT technik v terénu, Broadband"
+                period="2016 — 2024"
+                highlights={[
+                  "Zkušenost s instalací rádiových spojů, svařováním optických vláken a montováním OLT/ONT.",
                 ]}
-                />
+              />
             </Timeline>
           </Card>
+
 
           <Card id="vzdelani">
             <SectionTitle>Vzdělání</SectionTitle>
@@ -135,6 +139,67 @@ export default function CVSite() {
               <li>IT essentials: PC Hardware and Software, Cisco</li>
               <li>MOS Word & Powerpoint, Microsoft</li>
             </ul>
+          </Card>
+
+
+          <Card id="projekty">
+            <SectionTitle>Osobní projekty</SectionTitle>
+            <div className="mt-3 space-y-5 text-[15px] leading-7 text-neutral-700">
+              <p>V rámci osobních projektů mám zkušenost s:</p>
+              <ul className="list-disc space-y-4 pl-5">
+                <li>
+                  <p className="font-medium text-neutral-900 print:text-neutral-900">Automatizační skripty pro dohled</p>
+                  <p>Vyvíjím skripty, které načítají data z aktivních routerů, webů i záloh konfigurací. Po zadání ID služby či pseudowiru skript vyhledá PE routery, získá parametry VPN (epipe/xconnect) a dopočítá aktuální provoz v bps/kbps/mbps i na zařízeních bez přímé podpory.</p>
+                </li>
+                <li>
+                  <p className="font-medium text-neutral-900 print:text-neutral-900">Audit NIS2 a práce s assety</p>
+                  <p>S referenty a v Alvao CMDB jsem sbíral data o sekundárních aktivech, mapoval je na primární prvky a v Excelu sestavil logiku hodnocení inspirovanou metodikami Gordic CSA a ICZ Risk*Guide.</p>
+                </li>
+                <li>
+                  <p className="font-medium text-neutral-900 print:text-neutral-900">Laboratorní prostředí</p>
+                  <p>Propojil jsem FreeRADIUS pod Proxmoxem s routerem v EVE‑NG na jiném fyzickém serveru skrz LAN, všechny prvky spravuji vzdáleně přes Tailscale a připravuji automatizaci nasazení pomocí Ansible.</p>
+                </li>
+                <li>
+                  <p className="font-medium text-neutral-900 print:text-neutral-900">Fyzická síťová infrastruktura</p>
+                  <p>Postavil jsem několik rádiových spojů, svařil nízké stovky optických vláken a vedl školení v CETINu i v Alefu o činnosti optické svářečky, fyzice vlákna a technologiích SMF/DMF, AOC, DAC, WDM, SFP.</p>
+                </li>
+                <li>
+                  <p className="font-medium text-neutral-900 print:text-neutral-900">Práce v datových centrech</p>
+                  <p>Montoval jsem routery v DC Sitel a CE Colo a pomocí Zabbixu sleduji Mikrotik routery i Ubiquiti rádia.</p>
+                </li>
+                <li>
+                  <p className="font-medium text-neutral-900 print:text-neutral-900">Databáze a další technologie</p>
+                  <p>Na ČVUT jsem v rámci semestrální práce pracoval s PostgreSQL a dlouhodobě rozšiřuji lab o nové scénáře automatizace.</p>
+                </li>
+              </ul>
+            </div>
+          </Card>
+
+          <Card id="projekty-detail">
+            <SectionTitle>Osobní zkušenosti a projekty</SectionTitle>
+            <pre className="mt-3 whitespace-pre-wrap text-[15px] leading-7 text-neutral-700 print:text-neutral-800 font-sans">
+{`V rámci osobních projektů mám zkušenost s:
+
+V práci různé skripty které buď načítají data z aktivních routerů, z webů či back upů konfigurací.
+Například:
+-	Po zadání ID služby či ID pseudowiru si python skript nalezne provider edge routery a vypisuje z nich aktuální informace  o dané VPN (epipe či xconnectu podle terminologie ) a následně vypočítá provoz (v bps, Kbps či Mbps, ) i když to dané routery sami neumí.
+
+Angažoval jsem se i v projektu ohledně auditu v rámci NIS2, ve kterém jsem s referenty či v Alvao CMDB sbíral data ohledně sekundárních aktiv a vytvářel jejich mapování s primárními či sekundárními aktivy. Následně jsem pracoval se všemi nasbíranými daty v excelu a vytvořil logiku na bázi Gordic CSA či ICZ Risk*Guide.   
+ 
+Propojení FreeRADIUSu pod Proxmoxem s routerem v EVE-NG na jiném fyzickém serveru skrz LAN.
+
+Jakožto IT technik jsem postavil několik rádiových spojů, svařil se svou svářečkou nižší stovky optických spojů, měl jsem i krátké odborné školení kolegům v Cetinu a na školení v Alefu o principu činnosti optické svářečky a fyzice okolo optického vlákna + vysvětlení SMF, DMF, AOC, DAC, WDM, SFP atd.
+
+Zkušenost s montováním routeru v DC Sitel/CE COLO.  
+
+Vzdálený přístup na všechny prvky skrze VPN Tailscale.
+
+Zabbix dohled Mikrotik routeru a Ubiquiti rádia.
+
+Na ČVUT v rámci semestrální práce zkušenost s PostgreSQL databází
+
+V rámci zájmu o automatizaci mám v plánu do LABu  implementovat Ansible`}
+            </pre>
           </Card>
 
           <Card id="kontakt">
