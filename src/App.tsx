@@ -128,6 +128,8 @@ export default function CVSite() {
             </Timeline>
           </Card>
 
+          
+
           <Card id="certifikaty">
             <SectionTitle>Certifikáty</SectionTitle>
             <ul className="mt-3 space-y-2 text-sm">
@@ -175,31 +177,13 @@ export default function CVSite() {
             </div>
           </Card>
 
-          <Card id="projekty-detail">
-            <SectionTitle>Osobní zkušenosti a projekty</SectionTitle>
-            <pre className="mt-3 whitespace-pre-wrap text-[15px] leading-7 text-neutral-700 print:text-neutral-800 font-sans">
-{`V rámci osobních projektů mám zkušenost s:
-
-V práci různé skripty které buď načítají data z aktivních routerů, z webů či back upů konfigurací.
-Například:
--	Po zadání ID služby či ID pseudowiru si python skript nalezne provider edge routery a vypisuje z nich aktuální informace  o dané VPN (epipe či xconnectu podle terminologie ) a následně vypočítá provoz (v bps, Kbps či Mbps, ) i když to dané routery sami neumí.
-
-Angažoval jsem se i v projektu ohledně auditu v rámci NIS2, ve kterém jsem s referenty či v Alvao CMDB sbíral data ohledně sekundárních aktiv a vytvářel jejich mapování s primárními či sekundárními aktivy. Následně jsem pracoval se všemi nasbíranými daty v excelu a vytvořil logiku na bázi Gordic CSA či ICZ Risk*Guide.   
- 
-Propojení FreeRADIUSu pod Proxmoxem s routerem v EVE-NG na jiném fyzickém serveru skrz LAN.
-
-Jakožto IT technik jsem postavil několik rádiových spojů, svařil se svou svářečkou nižší stovky optických spojů, měl jsem i krátké odborné školení kolegům v Cetinu a na školení v Alefu o principu činnosti optické svářečky a fyzice okolo optického vlákna + vysvětlení SMF, DMF, AOC, DAC, WDM, SFP atd.
-
-Zkušenost s montováním routeru v DC Sitel/CE COLO.  
-
-Vzdálený přístup na všechny prvky skrze VPN Tailscale.
-
-Zabbix dohled Mikrotik routeru a Ubiquiti rádia.
-
-Na ČVUT v rámci semestrální práce zkušenost s PostgreSQL databází
-
-V rámci zájmu o automatizaci mám v plánu do LABu  implementovat Ansible`}
-            </pre>
+          <Card id="souteze">
+            <SectionTitle>Hackathony & soutěže</SectionTitle>
+            <ul className="mt-3 space-y-2 text-sm">
+              <li>AT&amp;T Hackathon (2019) — účast</li>
+              <li>Seznam.cz Hackathon (2019) — 2. místo</li>
+              <li>Kybersoutez (2019) — postup do národního finále</li>
+            </ul>
           </Card>
 
           <Card id="kontakt">
