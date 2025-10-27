@@ -11,22 +11,22 @@ export default function CVSite() {
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-900 print:bg-white">
       {/* Header */}
-      <header className="sticky top-0 z-10 backdrop-blur bg-white/70 border-b border-neutral-200 print:static print:top-auto print:z-auto print:bg-white print:border-neutral-300 print:backdrop-blur-none print:shadow-none">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
-          <h1 className="text-2xl font-semibold tracking-tight">Martin Mosinger</h1>
-          <div className="flex items-center gap-3">
-            <nav className="hidden md:flex items-center gap-4 text-sm text-neutral-600 print:flex">
-              <a href="#profil" className="hover:text-neutral-900 print:text-neutral-900">Profil</a>
-              <a href="#praxe" className="hover:text-neutral-900 print:text-neutral-900">Praxe</a>
-              <a href="#vzdelani" className="hover:text-neutral-900 print:text-neutral-900">Vzdělání</a>
-              <a href="#certifikaty" className="hover:text-neutral-900 print:text-neutral-900">Certifikáty</a>
-              <a href="#projekty" className="hover:text-neutral-900 print:text-neutral-900">Projekty</a>
-              <a href="#kontakt" className="hover:text-neutral-900 print:text-neutral-900">Kontakt</a>
+      <header className="border-b border-neutral-200 bg-white print:bg-white">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-6">
+          <h1 className="text-3xl font-semibold tracking-tight">Martin Mosinger</h1>
+          <div className="flex flex-wrap items-center gap-3">
+            <nav className="flex flex-wrap items-center gap-4 text-sm text-neutral-600 print:hidden">
+              <a href="#profil" className="hover:text-neutral-900">Profil</a>
+              <a href="#praxe" className="hover:text-neutral-900">Praxe</a>
+              <a href="#vzdelani" className="hover:text-neutral-900">Vzdělání</a>
+              <a href="#certifikaty" className="hover:text-neutral-900">Certifikáty</a>
+              <a href="#projekty" className="hover:text-neutral-900">Projekty</a>
+              <a href="#kontakt" className="hover:text-neutral-900">Kontakt</a>
             </nav>
             <button
               type="button"
               onClick={handlePrint}
-              className="inline-flex items-center gap-2 rounded-full bg-neutral-900 px-3 py-2 text-sm font-medium text-white transition hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 focus:ring-offset-white print:hidden"
+              className="inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-white px-3 py-2 text-sm font-medium text-neutral-700 transition hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 focus:ring-offset-white print:hidden"
             >
               <Printer className="h-4 w-4" aria-hidden />
               Vytisknout
@@ -36,10 +36,10 @@ export default function CVSite() {
       </header>
 
       {/* Main */}
-      <main className="max-w-6xl mx-auto grid gap-8 px-4 py-8 lg:grid-cols-[320px,1fr] print:grid-cols-[280px,1fr] print:gap-8 print:px-0 print:py-6 print:max-w-none print:w-full print:items-start">
+      <main className="max-w-6xl mx-auto grid gap-8 px-4 py-8 lg:grid-cols-[320px,1fr] print:grid-cols-1 print:gap-6 print:px-12 print:py-6 print:max-w-[200mm] print:w-full print:items-start">
         {/* Sidebar */}
-        <aside className="space-y-8 print:space-y-6">
-          <Card id="kontakt">
+        <aside className="space-y-8 print:order-last print:grid print:grid-cols-2 print:gap-4 print:space-y-0 print:pt-4">
+          <Card id="kontakt" className="print:col-span-2">
             <SectionTitle>Kontakt</SectionTitle>
             <ul className="mt-3 space-y-2 text-sm">
               <li className="flex items-center gap-2"><MapPin className="w-4 h-4"/> Praha</li>
@@ -65,12 +65,12 @@ export default function CVSite() {
             <SectionTitle>Hackathony & soutěže</SectionTitle>
             <ul className="mt-3 space-y-2 text-sm">
               <li>AT&amp;T Hackathon (2019) — účast</li>
-              <li>Seznam.cz Hackathon (2019) — 2. místo</li>
-              <li>Kybersoutez (2019) — postup do národního finále</li>
+              <li>Seznam.cz Hackathon (2019) — účast</li>
+              <li>Kybernetická soutěž (2019) — národní finále</li>
             </ul>
           </Card>
 
-          <Card>
+          <Card className="print:col-span-2">
             <SectionTitle>Dovednosti</SectionTitle>
             <div className="mt-3 grid grid-cols-1 gap-3">
               <Skill name="Cisco IOS" level={4} />
@@ -87,6 +87,16 @@ export default function CVSite() {
           </Card>
 
           <Card>
+            <SectionTitle>Odkazy</SectionTitle>
+            <ul className="mt-3 space-y-2 text-sm">
+              <li className="flex items-center gap-2">
+                <Linkedin className="w-4 h-4 text-[#0a66c2]" />
+                <a className="underline decoration-dotted text-neutral-800 hover:text-neutral-900" href="https://www.linkedin.com/in/martin-mosinger-junior/">LinkedIn</a>
+              </li>
+            </ul>
+          </Card>
+
+          <Card>
             <SectionTitle>Koníčky</SectionTitle>
             <ul className="mt-3 list-disc pl-5 text-sm leading-6">
               <li>Počítačové sítě</li>
@@ -94,17 +104,10 @@ export default function CVSite() {
               <li>Koně</li>
             </ul>
           </Card>
-
-          <Card>
-            <SectionTitle>Odkazy</SectionTitle>
-            <ul className="mt-3 space-y-2 text-sm">
-              <li className="flex items-center gap-2"><Linkedin className="w-4 h-4"/> <a className="underline decoration-dotted" href="https://www.linkedin.com/in/martin-mosinger-junior/">LinkedIn</a></li>
-            </ul>
-          </Card>
         </aside>
 
         {/* Content */}
-        <section className="space-y-8">
+        <section className="space-y-8 print:order-first print:flex print:flex-col print:gap-6 print:space-y-0">
           <Card id="profil">
             <SectionTitle>Profil</SectionTitle>
             <p className="mt-3 text-[15px] leading-7 text-neutral-700">
@@ -173,7 +176,7 @@ export default function CVSite() {
                 </li>
                 <li>
                   <p className="font-medium text-neutral-900 print:text-neutral-900">Práce v datových centrech</p>
-                  <p>Montoval jsem routery v DC Sitel a CE Colo a pomocí Zabbixu sleduji Mikrotik routery i Ubiquiti rádia.</p>
+                  <p>Montoval jsem routery v DC Sitel/CE Colo a pomocí Zabbixu sleduji Mikrotik routery i Ubiquiti rádia.</p>
                 </li>
                 <li>
                   <p className="font-medium text-neutral-900 print:text-neutral-900">Databáze a další technologie</p>
@@ -195,11 +198,11 @@ export default function CVSite() {
 }
 
 /* ——— UI helpers ——— */
-function Card({ id, children }: { id?: string; children: ReactNode }) {
+function Card({ id, children, className = "" }: { id?: string; children: ReactNode; className?: string }) {
   return (
     <section
       id={id}
-      className="bg-white rounded-2xl border border-neutral-200 p-5 shadow-sm scroll-mt-24 print:shadow-none print:border-neutral-300 print:bg-white print:break-inside-avoid print:p-4"
+      className={`scroll-mt-24 rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm print:break-inside-avoid print:border-neutral-300 print:bg-white print:p-4 print:shadow-none ${className}`}
     >
       {children}
     </section>
